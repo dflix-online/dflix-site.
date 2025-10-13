@@ -1,0 +1,63 @@
+:root{--red:#e50914;--bg:#000;--card:#0f0f10;--muted:#9b9b9b}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--bg);color:#fff;font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.4}
+a{color:inherit;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;height:56vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('fundo.png') center/cover no-repeat;filter:grayscale(20%) brightness(55%);opacity:0.6;transform:scale(1.03)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6))}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:0 16px;transform:translateY(-6px)}
+.logo{height:56px;margin-bottom:12px}
+.hero h1{font-size:2.2rem;margin:6px 0;color:#fff}
+.accent{color:var(--red)}
+.lead{color:#ddd;margin-bottom:14px}
+.cta{display:inline-block;background:var(--red);padding:12px 20px;border-radius:28px;color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(229,9,20,0.2);transition:transform .16s ease}
+.cta:hover{transform:translateY(-4px)}
+
+/* WHAT */
+.what{padding:26px 16px;text-align:center;background:#070707}
+.what h2{color:var(--red);margin-bottom:6px}
+.what .muted{color:var(--muted)}
+
+/* CAROUSEL */
+.carousel-section{padding:30px 16px;background:linear-gradient(180deg,#000,#060606)}
+.section-head{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto 12px;padding:0 8px}
+.section-head h2{margin:0;color:var(--red)}
+.nav-controls{display:flex;gap:8px}
+.arrow{background:rgba(255,255,255,0.06);border:0;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:16px;transition:background .15s}
+.arrow:hover{background:rgba(255,255,255,0.12)}
+
+/* carousel grid */
+.carousel{max-width:1200px;margin:0 auto;display:flex;gap:16px;padding:12px 8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth; -webkit-overflow-scrolling:touch}
+.card{min-width:220px;height:320px;border-radius:12px;overflow:hidden;background:var(--card);flex:0 0 auto;position:relative;box-shadow:0 10px 30px rgba(0,0,0,0.6);scroll-snap-align:center;transition:transform .25s ease,box-shadow .25s ease}
+.card img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(65%) saturate(90%)}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(229,9,20,0.12)}
+.card-footer{position:absolute;left:12px;bottom:12px;z-index:3;background:linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3));padding:8px 12px;border-radius:8px;font-weight:700;color:#fff}
+
+/* hint */
+.hint{text-align:center;color:var(--muted);font-size:0.9rem;margin-top:10px}
+
+/* PLANS */
+.plans{padding:36px 16px;background:#070707;text-align:center}
+.plans-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;max-width:1100px;margin:0 auto}
+.plan{width:220px;background:linear-gradient(180deg,#111,#0d0d0d);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 10px 30px rgba(0,0,0,0.6);transition:transform .18s ease,box-shadow .18s}
+.plan:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(229,9,20,0.12);border-color:rgba(229,9,20,0.08)}
+.price{color:var(--red);font-weight:800;font-size:1.2rem;margin:10px 0}
+
+/* CTA button */
+.btn{display:inline-block;background:var(--red);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(229,9,20,0.18);transition:transform .12s}
+.btn:hover{transform:translateY(-4px)}
+
+/* whatsapp floating */
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#25d366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.5);animation:pulse 2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+/* footer */
+footer{padding:26px;background:#060606;color:#9a9a9a;text-align:center}
+
+/* responsive */
+@media (max-width:900px){
+  .carousel{gap:12px;padding:12px}
+  .card{min-width:180px;height:260px}
+  .hero h1{font-size:1.6rem}
+}
